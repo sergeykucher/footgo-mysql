@@ -13,11 +13,11 @@ docker build -t footgo:1.0.2 .
 
 Windows:
 
-docker run --rm --name mysql -v ${PWD}/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=pwd -e MYSQL_DATABASE=footgo mysql:5.7
+docker run --rm --name mysql -v ${PWD}/mysql:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=pwd -e MYSQL_DATABASE=footgo mysql:5.7
 
 Linux:
 
-docker run --rm --name mysql -v $(pwd)/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=pwd -e MYSQL_DATABASE=footgo mysql:5.7
+docker run --rm --name mysql -v $(pwd)/mysql:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=pwd -e MYSQL_DATABASE=footgo mysql:5.7
 
 * Run docker container
 
